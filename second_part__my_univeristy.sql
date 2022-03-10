@@ -52,7 +52,8 @@ JOIN `course_teacher`
 ON `courses`.`id` = `course_teacher`.`course_id`
 JOIN `teachers`
 ON `teachers` . `id` = `course_teacher` . `teacher_id`
-WHERE `departments`.`name` = 'Dipartimento di Matematica';
+WHERE `departments`.`name` = 'Dipartimento di Matematica'
+GROUP BY `teachers` . `id`;
 
 -- BONUS: Selezionare per ogni studente quanti tentativi d’esame ha sostenuto per superare ciascuno dei suoi esami --
 
